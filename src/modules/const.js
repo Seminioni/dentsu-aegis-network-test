@@ -1,0 +1,1 @@
+export const ARTICLE_BODY_PREVIEW_LENGTH = 255;
