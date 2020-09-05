@@ -7,6 +7,7 @@ import Anchor from '@/components/Anchor.vue';
 import List from '@/components/List.vue';
 import ListItem from '@/components/ListItem.vue';
 import Author from '@/components/Author.vue';
+import ArticleAnchor from '@/components/ArticleAnchor.vue';
 
 Vue.config.productionTip = false;
 
@@ -17,6 +18,7 @@ Vue.filter('capitalize', function (value) {
 })
 
 Vue.component('Anchor', Anchor);
+Vue.component('ArticleAnchor', ArticleAnchor);
 Vue.component('List', List);
 Vue.component('ListItem', ListItem);
 Vue.component('Author', Author);

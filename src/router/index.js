@@ -42,8 +42,8 @@ const routes = [
     },
     children: [
       {
-        path: "",
-        component: User
+        path: '',
+        component: User,
       },
       {
         path: 'articles',

@@ -2,9 +2,11 @@
   <div class="articles-page">
     <List heading="Articles">
       <ListItem v-for="article in $store.state.articles" class="article-preview" :key="article.id">
-        <Anchor :to="`/articles/${article.id}`">
+        <ArticleAnchor
+          :to="`/articles/${article.id}`"
+          :is-article-visited="article.isArticleVisited">
           <h3 class="article-heading">{{ article.title | capitalize }}</h3>
-        </Anchor>
+        </ArticleAnchor>
         <div class="article-body">{{ article.bodyPreview }}</div>
         <Author class="article-author" :author="$store.getters.getUserById(article.userId) || {}" />
       </ListItem>

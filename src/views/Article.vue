@@ -14,10 +14,15 @@ export default {
 
   computed: {
     ...mapGetters(['getArticleById']),
+
     article() {
       return this.getArticleById(this.$route.params.id);
-    },
+    }
   },
+
+  created() {
+    this.$store.dispatch('checkArticleIsRead', this.article.id)
+  }
 };
 </script>
 

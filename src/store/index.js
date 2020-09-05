@@ -16,6 +16,9 @@ export default new Vuex.Store({
     UPDATE_ARTICLES(state, articles) {
       state.articles = articles;
     },
+    UPDATE_ARTICLE(state, [index, article, payload]) {
+      state.articles[index] = { ...article, ...payload };
+    },
   },
   getters: {
     trim: state => (entity, length) => {
@@ -29,18 +32,27 @@ export default new Vuex.Store({
       return state.users.find(user => +user.id === +userId);
     },
     getArticleById: state => articleId => {
-      return state.articles.find(article => +article.id === +articleId)
+      return state.articles.find(article => +article.id === +articleId);
     },
     getUserArticlesById: state => userId => {
-      return state.articles.filter(article => +article.userId === +userId)
-    }
+      return state.articles.filter(article => +article.userId === +userId);
+    },
   },
   actions: {
+    checkArticleIsRead({ getters, state, commit }, articleId) {
+      const article = getters.getArticleById(articleId);
+
+      if (article.isArticleVisited) return;
+
+      const index = state.articles.indexOf(article);
+
+      commit('UPDATE_ARTICLE', [index, article, { isArticleVisited: true }]);
+    },
     fetchArticles() {
-      return fetchArticles()
+      return fetchArticles();
     },
     fetchUsers() {
-      return fetchUsers()
+      return fetchUsers();
     },
     async fetchPostsAndUsers({ dispatch, commit }) {
       try {
