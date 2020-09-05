@@ -8,7 +8,7 @@
           <h3 class="article-heading">{{ article.title | capitalize }}</h3>
         </ArticleAnchor>
         <div class="article-body">{{ article.bodyPreview }}</div>
-        <Author class="article-author" :author="$store.getters.getUserById(article.userId) || {}" />
+        <Author class="article-author" :author="$store.getters.getUserById(article.userId)" />
       </ListItem>
     </List>
   </div>
