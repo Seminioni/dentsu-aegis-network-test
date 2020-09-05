@@ -4,7 +4,7 @@
       <ArticleAnchor
         :to="`/articles/${article.id}`"
         :is-article-visited="article.isArticleVisited">
-        {{ `${article.bodyPreview}` | capitalize }}
+        {{ `${article.title}` | capitalize }}
       </ArticleAnchor>
     </ListItem>
   </List>
@@ -16,7 +16,9 @@ import ArticleAnchor from '@/components/ArticleAnchor.vue';
 
 export default {
   name: 'ListOfFirstTenArticles',
+
   components: { ArticleAnchor },
+
   computed: {
     ...mapGetters([
       'trim',
