@@ -14,16 +14,17 @@ export default {
 <style lang="scss" scoped>
 .anchor:not(.anchor-logo) {
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid var(--c-black);
   padding: 10px;
   text-decoration: none;
-  color: #2b1b7c;
+  color: var(--c-text);
   transition: color, background 0.25s linear;
 
   &:hover,
+  &.router-link-exact-active,
   &:focus {
-    color: #90e0f1;
-    background: #2b1b7c;
+    color: var(--c-background);
+    background: var(--c-text);
   }
 }
 </style>

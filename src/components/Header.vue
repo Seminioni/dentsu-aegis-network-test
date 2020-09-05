@@ -3,6 +3,8 @@
     <slot name="logo"></slot>
 
     <nav class="nav">
+      <h2>Navigation</h2>
+
       <slot name="nav"></slot>
     </nav>
   </header>
@@ -15,24 +17,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .header {
-    display: flex;
-    align-items: flex-start;
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-    .nav {
-      margin-top: 11px;
-    }
-
-    .anchor-logo {
-      margin-right: 50px;
-    }
+  .anchor-logo {
+    margin-bottom: 20px;
+    margin-right: 50px;
   }
+}
 
-  .nav {
-    padding: 20px 0px 0 0;
-
-    *:not(:last-of-type) {
-      margin-right: 20px;
-    }
+.nav {
+  *:not(:last-of-type) {
+    margin-right: 20px;
   }
+}
 </style>

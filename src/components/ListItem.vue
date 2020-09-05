@@ -17,7 +17,7 @@ export default {
 }
 
 .list-item >>> .anchor {
-  padding: 2px 0;
+  padding: 2px;
 }
 
 .list-item:not(:last-of-type) {

@@ -1,7 +1,7 @@
 <template>
   <List heading="Recent users">
     <ListItem v-for="user in firstTenUsers" class="list-item" :key="user.id">
-      <Anchor :to="`/users/${user.id}`">{{ user.name | capitalize }} - {{user.username}}</Anchor>
+      <Anchor :to="`/users/${user.id}`">{{ user.name | capitalize }} - {{ user.username }}</Anchor>
     </ListItem>
   </List>
 

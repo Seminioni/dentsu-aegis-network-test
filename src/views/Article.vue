@@ -1,7 +1,7 @@
 <template>
   <div class="article-page">
     <h2 class="article-title">{{ article.title | capitalize }}</h2>
-    <div class="article-body">{{ article.body }}</div>
+    <div class="article-body">{{ article.body | capitalize }}</div>
     <Author class="article-author" :author="$store.getters.getUserById(article.userId)" />
   </div>
 </template>
@@ -25,7 +25,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-
-</style>
