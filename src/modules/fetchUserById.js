@@ -1,4 +1,4 @@
-import { api } from '@/modules/api.js';
+import { api } from '@/modules';
 
 export const fetchUserById = id => {
   return api(`/users/${id}`);

@@ -1,6 +1,5 @@
-import { api } from '@/modules/api.js';
+import { api, FetchArticlesError } from '@/modules';
 import { Article } from '@/entities/Article.js';
-import { FetchArticlesError } from '@/modules/errors.js';
 
 export const fetchArticles = async () => {
   try {

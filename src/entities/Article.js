@@ -1,4 +1,4 @@
-import { ARTICLE_BODY_PREVIEW_LENGTH } from '@/modules/const.js';
+import { ARTICLE_BODY_PREVIEW_LENGTH } from '@/modules';
 
 const trimArticleBody = (string) => {
   return string && string.length <= ARTICLE_BODY_PREVIEW_LENGTH

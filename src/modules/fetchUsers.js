@@ -1,6 +1,5 @@
-import { api } from '@/modules/api.js';
-import { FetchUsersError} from '@/modules/errors.js';
-import { User} from '@/entities/User.js';
+import { api, FetchUsersError } from '@/modules';
+import { User } from '@/entities/User.js';
 
 export const fetchUsers = async () => {
   try {
