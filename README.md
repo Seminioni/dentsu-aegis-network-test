@@ -1,4 +1,6 @@
-# dentsu-aegis-network
+# dentsu-aegis-network test
+
+Test project built on Vue.js, Vuex, Vue-router, Sass.
 
 ## Look live
 ```
