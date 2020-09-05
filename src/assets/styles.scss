@@ -1,0 +1,40 @@
+:root {
+  --c-black: black;
+  --c-background: #90e0f1;
+  --c-text: #2b1b7c;
+}
+
+body {
+  background-color: var(--c-background);
+  font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 2px;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--c-text);
+  text-align: left;
+  padding: 10px;
+  max-width: 768px;
+}
+
+.main {
+  margin-top: 20px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
