@@ -66,10 +66,8 @@ const router = new VueRouter({
 router.beforeEach(async (to, from, next) => {
   if (store.state.users.length === 0 || store.state.articles.length === 0) {
     await store.dispatch('fetchPostsAndUsers');
-    next();
-  } else {
-    next();
   }
+  next();
 });
 
 export default router;
