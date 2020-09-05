@@ -29,28 +29,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-body {
-  background-color: #90e0f1;
-  font-size: 16px;
-}
-
-h1, h2, h3, h4 {
-  margin-top: 2px;
-  margin-bottom: 2px;
-}
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2b1b7c;
-  text-align: left;
-  padding: 10px;
-}
-
-.main {
-  padding-left: 15px;
-}
-</style>
+<style lang="scss" src="@/assets/styles.scss" />
