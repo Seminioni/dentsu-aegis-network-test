@@ -17,11 +17,12 @@ export default {
 
     article() {
       return this.getArticleById(this.$route.params.id);
-    }
+    },
   },
 
   created() {
-    this.$store.dispatch('checkArticleIsRead', this.article.id)
-  }
+    this.$route.meta.setTitle(this.article.title);
+    this.$store.dispatch('checkArticleIsRead', this.article.id);
+  },
 };
 </script>

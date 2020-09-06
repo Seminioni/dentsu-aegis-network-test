@@ -20,7 +20,11 @@ export default {
 
     user() {
       return this.getUserById(this.$route.params.id);
-    },
+    }
   },
+
+  created() {
+    this.$route.meta.setTitle(this.user.name)
+  }
 };
 </script>
