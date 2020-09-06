@@ -26,6 +26,8 @@ export default {
     const articles = store.getters.getUserArticlesById(to.params.id);
     const user = store.getters.getUserById(to.params.id);
 
+    to.meta.setTitle(`${user.name} articles`);
+
     next(vm => {
       vm.articles = articles;
       vm.user = user;
