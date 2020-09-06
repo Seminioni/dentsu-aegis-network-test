@@ -1,7 +1,7 @@
 <template>
   <p class="author">
     <Anchor :to="`/users/${author.id}/articles`">
-      @{{author.username}}
+      {{author.name | capitalize}} — @{{author.username}}
     </Anchor>
   </p>
 
