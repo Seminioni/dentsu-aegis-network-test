@@ -1,12 +1,13 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import { capitalize } from '@/modules';
 
 import store from '@/store';
 
 Vue.use(VueRouter);
 
 const setTitle = (page = 'home', postfix = 'Articles Viewer') => {
-  document.title = `${page} | ${postfix}`;
+  document.title = `${capitalize(page)} | ${postfix}`;
 
   return setTitle;
 };

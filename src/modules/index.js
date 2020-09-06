@@ -4,3 +4,4 @@ export * from './errors.js';
 export { fetchUsers } from './fetchUsers.js';
 export { fetchArticles } from './fetchArticles.js';
 export { fetchUserById } from './fetchUserById.js';
+export { capitalize } from './capitalize.js';

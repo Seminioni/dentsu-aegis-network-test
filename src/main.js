@@ -8,14 +8,11 @@ import List from '@/components/List.vue';
 import ListItem from '@/components/ListItem.vue';
 import Author from '@/components/Author.vue';
 import ArticleAnchor from '@/components/ArticleAnchor.vue';
+import { capitalize } from '@/modules';
 
 Vue.config.productionTip = false;
 
-Vue.filter('capitalize', function (value) {
-  if (!value) return '';
-  value = value.toString();
-  return value.charAt(0).toUpperCase() + value.slice(1);
-})
+Vue.filter('capitalize', capitalize);
 
 Vue.component('Anchor', Anchor);
 Vue.component('ArticleAnchor', ArticleAnchor);
