@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import { fetchArticles, fetchUsers } from '@/modules';
+import { getArticleById, getUserById, getUserArticlesById } from './getters/getters.js';
 
 Vue.use(Vuex);
 
@@ -28,15 +29,9 @@ export default new Vuex.Store({
 
       return state[entity].slice(0, length);
     },
-    getUserById: state => userId => {
-      return state.users.find(user => +user.id === +userId);
-    },
-    getArticleById: state => articleId => {
-      return state.articles.find(article => +article.id === +articleId);
-    },
-    getUserArticlesById: state => userId => {
-      return state.articles.filter(article => +article.userId === +userId);
-    },
+    getUserById,
+    getArticleById,
+    getUserArticlesById
   },
   actions: {
     checkArticleIsRead({ getters, state, commit }, articleId) {
